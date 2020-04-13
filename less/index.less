@@ -57,3 +57,54 @@ html, body {
     height: 100%;
 }
 
+@boxColor: rgb(140, 255, 211);
+@titleColor: pink;
+@textColor: black;
+@borders: 5px solid hotpink;
+
+body {
+	background-image: url("../tumblr_inline_n1t4ykuOOt1qfc9y0540.gif");
+	background-attachment: fixed;
+	background-color: rgb(121, 246, 179);
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	color: green;
+	a {
+		margin: 10px;
+	}
+}
+
+header {
+	.splash {
+		background-color: @boxColor;
+		padding: 20px;
+		.lily {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	h1 {
+		font-size: 1.5rem;
+		color: @titleColor;
+	}
+}
+
+.selfSummary {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	.aboutMe {
+		width: 25%;
+	}
+}
+
+button {
+	background-color: @titleColor ;
+}
+
+
