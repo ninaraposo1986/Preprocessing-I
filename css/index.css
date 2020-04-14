@@ -278,6 +278,7 @@ button {
   padding: 5px;
   width: 90px;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 .workHistory {
   margin-top: 35px;
