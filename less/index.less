@@ -50,10 +50,240 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+
+@boxColor: rgb(140, 255, 211);
+@textColor: black;
+@borders: 5px solid hotpink;
+@titleSize: 2rem;
+@stripes: url("../stripes3.png");
+
+.lilyTitle {
+	font-size: 2.6rem;
+	font-family: 'Fredoka One', cursive;
+	text-shadow: 2px 2px 2px #888;
+	color: rgb(8, 68, 8);
+}
+
+
+.contentCard {
+	background-image: @stripes;
+	border: @borders;
+	border-radius: 15px;
+}
+
+.companyName {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color:rgb(8, 68, 8);
+	margin-top: 10px;
+}
+
+.jobTitle {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.40rem;
+	font-weight: bold;
+}
+
+.jobDates {
+	font-size: 1.30rem;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+
+.textStyle {
+	color: rgb(10, 100, 78);
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1.35rem;
+	background-color: rgba(255, 255, 255, 0.555);
+}
+
+.titleStyle {
+	color: darkorchid;
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.1rem;
+}
+
+body {
+	background-image: url("../tumblr_inline_n1t4ykuOOt1qfc9y0540.gif");
+	background-attachment: fixed;
+	background-color: @boxColor;
+	max-width: 1000px;
+	width: 75%;
+	margin: 0 auto;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	a {
+		color: white;
+		text-decoration: none;
+		margin: 10px;
+		background-color: darkorchid;
+		padding: 10px;
+		border: 4px solid hotpink;
+		border-radius: 15px;
+		font-family: 'Varela Round', sans-serif;
+		&:hover {
+			text-transform: uppercase;
+		}
+	}
+}
+
+header {
+	.splash {
+		.contentCard();
+		padding: 20px;
+		.lily {
+			display: flex;
+			justify-content: space-between;
+			.lilyParagraph {
+				width: 65%;
+			}
+
+			img {
+				width: 30%;
+				height: 30%;
+				margin-top: 20px;
+				border: 5px solid goldenrod;
+				border-radius: 15px;
+			}
+		}
+	}
+	h1 {
+		.lilyTitle();
+	}
+
+	h2 {
+		.titleStyle();
+	}
+
+	h3 {
+		.jobDates();
+	}
+
+	p {
+		.textStyle();
+	}
+
+
+}
+
+.selfSummary {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 35px;
+	padding: 20px;
+	.aboutMe {
+		width: 25%;
+	}
+	h2 {
+		.titleStyle();
+	}
+	.contentCard();
+}
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	.textStyle();
+	list-style-type: square;
+	li {
+		margin: 15px;
+	}
+}
+
+button {
+	background-color: hotpink;
+	padding: 5px;
+	width: 90px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+
+.workHistory {
+	margin-top: 35px;
+	padding: 20px;
+	.contentCard();
+	h2 {
+		.titleStyle();
+	}
+
+	h3 {
+		.companyName();
+	}
+
+	h4 {
+		.jobTitle();
+	}
+
+	h5 {
+		.jobDates();
+	}
+
+	p {
+		.textStyle();
+	}
+
+	
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	 img {
+		 width: 13%;
+		 height: 13%;
+		 margin-top: 25px;
+		 }
+}
+
+.contact {
+	h2 {
+		.titleStyle();
+	}
+
+	h3 {
+		.jobTitle();
+	}
+
+	.contentCard();
+	padding: 20px;
+	margin-top: 35px;
+}
+
+@media (max-width: 500px) {
+	.lilyParagraph {
+		display: none;
+	}
+
+	header .splash .lily {
+		flex-direction: column;
+		img {
+			margin: 0 auto;
+			width: 80%;
+			height: 80%;
+		}
+	}
+
+	nav {
+		width: 100%;
+		justify-content: center;
+	}
+
+}
+
+
 
